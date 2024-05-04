@@ -15,27 +15,19 @@ const Home = () => {
     //     setAge(printAge);
     // }
     const [blogs, setBlogs] = useState([
-        {title: 'My New website', body: 'loremipsum...',author:'mario', id:1},
-        {title: 'Welcome Website', body: 'loremipsum...', author:'Dino', id:2},
-        {title: 'Web Dev Server', body: 'loremipsum...',author:'James', id:3 }
+        { title: 'My New website', body: 'loremipsum...', author: 'mario', id: 1 },
+        { title: 'Welcome Website', body: 'loremipsum...', author: 'Dino', id: 2 },
+        { title: 'Web Dev Server', body: 'loremipsum...', author: 'James', id: 3 }
     ]);
-    return ( 
+    return (
         <div className="home">
-            {
-                blogs.map((blog) =>(
-                    <div className="blog-preview" key={blog.id}>
-                        <h2>{blog.title}</h2>
-                        <p>Written By {blog.author}</p>
-                    </div>
-                ))
-            }
             {/*
             useState Example <button onClick={handleClick}>Click Me</button>
 
             <p>{name} is {age} years old.</p> */}
-            
+
         </div>
-     );
+    );
 }
- 
+
 export default Home;
