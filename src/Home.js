@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
     ]);
     return (
         <div className="home">
+            <BlogList sect={blogs} title="Blog List"/>
             {/*
             useState Example <button onClick={handleClick}>Click Me</button>
 
