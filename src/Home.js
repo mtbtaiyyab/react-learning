@@ -20,10 +20,15 @@ const Home = () => {
         { title: 'Welcome Website', body: 'loremipsum...', author: 'Dino', id: 2 },
         { title: 'Web Dev Server', body: 'loremipsum...', author: 'Mario', id: 3 }
     ]);
+    const handleBlog = (id) => {
+        const filteredBlog = blogs.filter(blog => blog.id !== id);
+        setBlogs(filteredBlog);
+    }
     return (
         <div className="home">
-            <BlogList sect={blogs} title="Blog List"/>
-            <BlogList sect={blogs.filter((blog) => (blog.author === 'Mario'))} title="Filtered Blog List"/>
+            <BlogList sect={blogs} title="Blog List" deleteBlog = {handleBlog} />
+            {/* Reusing Components */}
+            {/* <BlogList sect={blogs.filter((blog) => (blog.author === 'Mario'))} title="Filtered Blog List"/> */}
             {/*
             useState Example <button onClick={handleClick}>Click Me</button>
 
