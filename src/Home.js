@@ -32,7 +32,7 @@ const Home = () => {
     return (
         <div className="home">
             {errror && <div>{errror}</div>}
-            {isLoading && <div>Loading...</div>}
+            {isLoading && <div class="loader">Loading...</div>}
             {blogs && <BlogList sect={blogs} title="Blog List" />}
         </div>
     );

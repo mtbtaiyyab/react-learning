@@ -54,3 +54,8 @@
   color: #f1356d;
   margin-bottom: 8px;
 }
+.loader{
+  text-align: center;
+  font-size: 36px;
+  margin: 100px auto;
+}
