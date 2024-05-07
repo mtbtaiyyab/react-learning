@@ -3,7 +3,7 @@
 //     const blogs = props.sect;
 //     const title = props.title;
 // Second way to use props
-const BlogList = ({sect, title, deleteBlog}) => {
+const BlogList = ({sect, title}) => {
     const blogs = sect;
 return (
         <div className="blog-list">
@@ -13,7 +13,6 @@ return (
                     <div className="blog-preview" key={blog.id}>
                         <h2>{blog.title}</h2>
                         <p>Written By {blog.author}</p>
-                        <button onClick={() => deleteBlog(blog.id)}>Delete</button>
                     </div>
                 ))
             }
