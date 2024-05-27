@@ -59,3 +59,7 @@
   font-size: 36px;
   margin: 100px auto;
 }
+
+.blog-preview a{
+  text-decoration: none;
+}
