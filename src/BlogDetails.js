@@ -12,7 +12,7 @@ const BlogDetails = () => {
                 <article>
                     <h2>{blog.title}</h2>
                     <p>Written By {blog.author}</p>
-                    <div>{blog.body}</div>
+                    <div>{blog.detail}</div>
                 </article>
             )}
         </div>
