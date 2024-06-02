@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 const Create = () => {
     const [title, setTitle] = useState('');
     const [detail, setDetail] = useState('');
     const [author, setAuthor] = useState('');
     const [loading, setLoading] = useState(false);
+    const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
         const blog = { title, detail, author };
@@ -15,8 +17,8 @@ const Create = () => {
         }).then(() => {
             setLoading(false);
             console.log("New Blog Added");
-        })
-        console.log(blog);
+            history.push('/');
+        });
     }
     return (
         <div className="create">
